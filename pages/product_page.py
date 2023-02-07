@@ -10,7 +10,7 @@ class ProductPage(BasePage):
     def should_be_correct_message(self):
         product_name = self.browser.find_element(*ProductPageLocators.product_name)
         added_to_basket_message = self.browser.find_element(*ProductPageLocators.added_to_basket_message)
-        assert product_name.text in added_to_basket_message.text, "The message doesn't contain the product name"
+        assert product_name.text == added_to_basket_message.text, "The message with the product name is incorrect"
 
     def should_be_correct_price(self):
         product_price = self.browser.find_element(*ProductPageLocators.product_price)

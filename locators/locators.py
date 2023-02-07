@@ -22,5 +22,5 @@ class ProductPageLocators:
     product_name = (By.CSS_SELECTOR, ".product_main h1")
     product_price = (By.CSS_SELECTOR, ".product_main .price_color")
     basket_button = (By.CSS_SELECTOR, ".btn-add-to-basket")
-    added_to_basket_message = (By.CSS_SELECTOR, "#messages div:nth-child(1)")
+    added_to_basket_message = (By.CSS_SELECTOR, "#messages div:nth-child(1) strong")
     basket_total_price_message = (By.CSS_SELECTOR, "#messages p:first-of-type")
