@@ -6,21 +6,13 @@ class MainPageLocators:
 
 
 class LoginPageLocators:
-    login_form = (By.CSS_SELECTOR, "#login_form")
-    login_email = (By.CSS_SELECTOR, "#id_login-username")
-    login_password = (By.CSS_SELECTOR, "#id_login-password")
-    login_button = (By.CSS_SELECTOR, "[name='login_submit']")
-
-    register_form = (By.CSS_SELECTOR, "#register_form")
-    register_email = (By.CSS_SELECTOR, "#id_registration-email")
-    register_password_1 = (By.CSS_SELECTOR, "#id_registration-password1")
-    register_password_2 = (By.CSS_SELECTOR, "#id_registration-password2")
-    register_button = (By.CSS_SELECTOR, "[name='registration_submit']")
+    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
+    REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
 
 
 class ProductPageLocators:
-    product_name = (By.CSS_SELECTOR, ".product_main h1")
-    product_price = (By.CSS_SELECTOR, ".product_main .price_color")
-    basket_button = (By.CSS_SELECTOR, ".btn-add-to-basket")
-    added_to_basket_message = (By.CSS_SELECTOR, "#messages div:nth-child(1) strong")
-    basket_total_price_message = (By.CSS_SELECTOR, "#messages p:first-of-type")
+    PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")
+    PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
+    BASKET_BUTTON = (By.CSS_SELECTOR, ".btn-add-to-basket")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages div:nth-child(1) strong")
+    PRICE_MESSAGE = (By.CSS_SELECTOR, "#messages p:first-of-type")

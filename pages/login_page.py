@@ -13,9 +13,9 @@ class LoginPage(BasePage):
             "The URL for login page is incorrect"
 
     def should_be_login_form(self):
-        assert self.is_element_present(*LoginPageLocators.login_form), \
+        assert self.is_element_present(*LoginPageLocators.LOGIN_FORM), \
             "Login form is not presented on the login page"
 
     def should_be_register_form(self):
-        assert self.is_element_present(*LoginPageLocators.register_form), \
+        assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), \
             "Register form is not presented on the login page"

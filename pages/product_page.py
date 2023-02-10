@@ -4,18 +4,18 @@ from locators.locators import ProductPageLocators
 
 class ProductPage(BasePage):
     def click_add_to_basket(self):
-        basket_button = self.browser.find_element(*ProductPageLocators.basket_button)
+        basket_button = self.browser.find_element(*ProductPageLocators.BASKET_BUTTON)
         basket_button.click()
 
     def should_be_correct_message(self):
-        product_name = self.browser.find_element(*ProductPageLocators.product_name)
-        added_to_basket_message = self.browser.find_element(*ProductPageLocators.added_to_basket_message)
+        product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME)
+        added_to_basket_message = self.browser.find_element(*ProductPageLocators.SUCCESS_MESSAGE)
         assert product_name.text == added_to_basket_message.text, \
             "The added to basket message doesn't contain the product name or it's incorrect"
 
     def should_be_correct_price(self):
-        product_price = self.browser.find_element(*ProductPageLocators.product_price)
-        basket_total_price_message = self.browser.find_element(*ProductPageLocators.basket_total_price_message)
+        product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE)
+        basket_total_price_message = self.browser.find_element(*ProductPageLocators.PRICE_MESSAGE)
         assert product_price.text in basket_total_price_message.text, \
             "The added to basket message doesn't contain the product price or it's incorrect"
 
