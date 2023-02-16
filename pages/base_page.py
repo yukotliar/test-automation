@@ -69,3 +69,7 @@ class BasePage:
         except NoSuchElementException:
             return False
         return element_with_text.text
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), \
+            "User icon is not present, probably unauthorised user"
